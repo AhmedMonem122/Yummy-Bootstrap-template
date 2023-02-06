@@ -1,0 +1,14 @@
+{
+  "name": "yummy-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass assets/scss/main.scss assets/css/main.css -w"
+  },
+  "author": "Ahmed Monem",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
