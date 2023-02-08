@@ -1,5 +1,34 @@
 "use strict";
 
+// preloader
+
+const preloader = document.querySelector("#preloader");
+if (preloader) {
+  window.addEventListener("load", () => {
+    preloader.remove();
+  });
+}
+
+// Scroll to top
+
+const scrollTop = document.querySelector(".scroll-top");
+if (scrollTop) {
+  const toggleScrollTop = function () {
+    window.scrollY > 100
+      ? scrollTop.classList.add("active")
+      : scrollTop.classList.remove("active");
+  };
+  window.addEventListener("load", toggleScrollTop);
+  document.addEventListener("scroll", toggleScrollTop);
+  scrollTop.addEventListener(
+    "click",
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  );
+}
+
 // glightbox
 const glightbox = GLightbox({
   selector: ".glightbox",
